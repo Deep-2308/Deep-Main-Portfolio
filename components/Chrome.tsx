@@ -34,7 +34,7 @@ export default function Chrome() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with Deep on WhatsApp"
-        className={`fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-white px-4 py-3 text-sm font-medium text-background shadow-lg transition duration-500 hover:bg-[#1f9d55] hover:text-white ${
+        className={`fixed bottom-[5.5rem] right-5 md:bottom-[5.5rem] md:right-6 z-40 flex items-center gap-2 rounded-full bg-surface-elevated border border-border px-4 py-3 text-sm font-medium text-text-primary shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-[#1f9d55] hover:border-[#1f9d55] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#1f9d55] ${
           show ? "translate-y-0 opacity-100" : "pointer-events-none translate-y-4 opacity-0"
         }`}
       >

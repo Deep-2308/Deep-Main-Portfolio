@@ -3,7 +3,8 @@ import Reveal from "@/components/Reveal";
 import Chrome from "@/components/Chrome";
 import Projects from "@/components/Projects";
 import GitHubActivity from "@/components/GitHubActivity";
-import { ModeToggle, EngineerBlock } from "@/components/EngineerMode";
+import { ModeToggle as EngineerModeToggle, EngineerBlock } from "@/components/EngineerMode";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { GitHubIcon, LinkedInIcon, LeetCodeIcon, WhatsAppIcon, MailIcon, ArrowUpRight } from "@/components/Icons";
 import { EMAIL, LINKEDIN, GITHUB, LEETCODE, PROOFLY, WHATSAPP } from "@/lib/links";
 
@@ -40,7 +41,7 @@ function SocialRow({ large = false }: { large?: boolean }) {
           rel="noopener noreferrer"
           aria-label={label}
           title={label}
-          className={`flex items-center justify-center rounded-full border border-border transition duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-background ${
+          className={`flex items-center justify-center rounded-full border border-border transition duration-300 hover:-translate-y-0.5 hover:border-text-primary hover:bg-text-primary hover:text-background ${
             large ? "h-14 w-14" : "h-11 w-11"
           }`}
         >
@@ -70,7 +71,8 @@ export default function Home() {
             <a href="#projects" className="link-u hover:text-text-primary hidden sm:inline">Projects</a>
             <a href="#skills" className="link-u hover:text-text-primary hidden sm:inline">Skills</a>
             <a href="#contact" className="link-u hover:text-text-primary hidden sm:inline">Contact</a>
-            <ModeToggle />
+            <EngineerModeToggle />
+            <ThemeToggle />
           </nav>
         </header>
       </Reveal>
@@ -116,7 +118,7 @@ export default function Home() {
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href={`mailto:${EMAIL}`}
-              className="rounded-full bg-white px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
+              className="rounded-full bg-text-primary px-6 py-3 text-sm font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
             >
               Email me
             </a>
@@ -161,7 +163,7 @@ export default function Home() {
               Flagship · Solo build · Next.js, MongoDB, Tailwind, Vercel
             </p>
             <div className="mt-6">
-              <Link href="/projects/proofly" className="link-u font-mono text-sm font-medium text-accent hover:text-white">
+              <Link href="/projects/proofly" className="link-u font-mono text-sm font-medium text-accent hover:text-text-primary">
                 Read case study →
               </Link>
             </div>
@@ -247,7 +249,7 @@ export default function Home() {
                   </p>
                   <p className="text-text-secondary">Built in Python, with FFmpeg, faster-whisper, OpenCV and YOLO11. Subject-aware framing is planned for V14. Before and after clips are coming to this page.</p>
                   <div className="flex gap-6">
-                    <Link href="/projects/ai-clipping" className="link-u font-mono text-sm font-medium text-accent hover:text-white">
+                    <Link href="/projects/ai-clipping" className="link-u font-mono text-sm font-medium text-accent hover:text-text-primary">
                       Read case study →
                     </Link>
                     <a href="https://github.com/Deep-2308/AI-Clipping" target="_blank" rel="noopener noreferrer" className="link-u inline-flex items-center gap-2 font-mono text-sm"><GitHubIcon className="h-4 w-4" /> View the code <ArrowUpRight /></a>
@@ -390,14 +392,14 @@ export default function Home() {
                     href={WHATSAPP}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 text-base font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1f9d55] hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                    className="inline-flex items-center gap-3 rounded-full bg-text-primary px-7 py-4 text-base font-medium text-background transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#1f9d55] hover:text-white hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
                   >
                     <WhatsAppIcon className="h-5 w-5" />
                     Message me on WhatsApp
                   </a>
                   <a
                     href={`mailto:${EMAIL}`}
-                    className="inline-flex items-center gap-3 rounded-full border border-border px-7 py-4 text-base font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-background focus:outline-none focus:ring-2 focus:ring-white"
+                    className="inline-flex items-center gap-3 rounded-full border border-border px-7 py-4 text-base font-medium transition-all duration-300 hover:-translate-y-0.5 hover:border-text-primary hover:bg-text-primary hover:text-background focus:outline-none focus:ring-2 focus:ring-text-primary"
                   >
                     <MailIcon className="h-5 w-5" />
                     Email
@@ -408,16 +410,16 @@ export default function Home() {
                 <div className="mt-10 rounded-xl border border-border bg-background p-6 font-mono text-xs text-text-secondary leading-loose max-w-lg">
                   <div className="grid grid-cols-[100px_1fr] gap-4">
                     <span className="text-text-primary">EMAIL:</span>
-                    <a href={`mailto:${EMAIL}`} className="hover:text-white transition">{EMAIL}</a>
+                    <a href={`mailto:${EMAIL}`} className="hover:text-text-primary transition">{EMAIL}</a>
                     
                     <span className="text-text-primary">GITHUB:</span>
-                    <a href={GITHUB} target="_blank" rel="noopener noreferrer" className="hover:text-white transition">{GITHUB}</a>
+                    <a href={GITHUB} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition">{GITHUB}</a>
                     
                     <span className="text-text-primary">LINKEDIN:</span>
-                    <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="hover:text-white transition">{LINKEDIN}</a>
+                    <a href={LINKEDIN} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition">{LINKEDIN}</a>
                     
                     <span className="text-text-primary">WHATSAPP:</span>
-                    <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="hover:text-white transition">Available</a>
+                    <a href={WHATSAPP} target="_blank" rel="noopener noreferrer" className="hover:text-text-primary transition">Available</a>
                   </div>
                 </div>
               }

@@ -63,14 +63,14 @@ export default async function GitHubActivity() {
                           <div>
                             <div className="flex items-start justify-between gap-4">
                               <div>
-                                <h4 className="font-sans text-xl font-semibold text-text-primary transition-colors group-hover:text-white">
+                                <h4 className="font-sans text-xl font-semibold text-text-primary transition-colors group-hover:text-accent">
                                   {repo.name}
                                 </h4>
                                 <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-text-secondary">
                                   {repo.description || "No description provided."}
                                 </p>
                               </div>
-                              <ArrowUpRight className="h-4 w-4 shrink-0 text-text-secondary transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white" />
+                              <ArrowUpRight className="h-4 w-4 shrink-0 text-text-secondary transition group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-accent" />
                             </div>
                             <div className="mt-4 flex items-center gap-4 font-mono text-[11px] text-text-secondary">
                               <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-accent opacity-75"></span>{repo.language}</span>
@@ -125,7 +125,7 @@ export default async function GitHubActivity() {
                             engineer={
                               <div className="font-mono text-xs text-text-secondary">
                                 <span className="text-accent">[{formatDate(commit.commit.author.date)}]</span>
-                                <p className="mt-1 text-text-primary line-clamp-2 transition group-hover:text-white">
+                                <p className="mt-1 text-text-primary line-clamp-2 transition group-hover:text-accent">
                                   {commit.commit.message.split("\n")[0]}
                                 </p>
                                 <p className="mt-1 opacity-50 text-[10px]">{commit.sha.substring(0, 7)}</p>
@@ -147,7 +147,7 @@ export default async function GitHubActivity() {
             href="https://github.com/Deep-2308"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-background focus:outline-none focus:ring-2 focus:ring-white"
+            className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition hover:-translate-y-0.5 hover:border-text-primary hover:bg-text-primary hover:text-background focus:outline-none focus:ring-2 focus:ring-text-primary"
           >
             <GitHubIcon className="h-4 w-4" /> View full GitHub profile
           </a>

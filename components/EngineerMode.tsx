@@ -18,7 +18,7 @@ export function ModeToggle() {
     <button
       onClick={toggleEngineerMode}
       aria-pressed={isEngineerMode}
-      className={`font-mono text-[10px] uppercase tracking-widest transition-colors duration-300 ${isEngineerMode ? 'text-accent' : 'text-text-secondary hover:text-white'}`}
+      className={`font-mono text-[10px] uppercase tracking-widest transition-colors duration-300 ${isEngineerMode ? 'text-accent' : 'text-text-secondary hover:text-text-primary'}`}
     >
       [ ENGINEER MODE {isEngineerMode ? '●' : '○'} ]
     </button>

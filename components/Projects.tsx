@@ -27,7 +27,7 @@ export default function Projects() {
             aria-selected={f === x}
             onClick={() => setF(x)}
             className={`rounded-full border px-4 py-1.5 font-mono text-xs uppercase tracking-[0.14em] transition-all duration-300 ${
-              f === x ? "border-text-primary bg-white text-background" : "border-border text-text-secondary hover:border-white hover:text-text-primary"
+              f === x ? "border-text-primary bg-text-primary text-background" : "border-border text-text-secondary hover:border-text-primary hover:text-text-primary"
             }`}
           >
             {x}

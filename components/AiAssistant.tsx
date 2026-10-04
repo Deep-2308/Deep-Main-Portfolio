@@ -130,13 +130,13 @@ export default function AiAssistant() {
   return (
     <>
       {/* Floating Action Button */}
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-40">
         <button
           ref={triggerRef}
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Ask Deep's AI"
           aria-expanded={isOpen}
-          className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-surface-elevated text-text-primary shadow-lg transition-all hover:scale-105 hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"
+          className="flex h-12 w-12 items-center justify-center rounded-full border border-border bg-surface-elevated text-text-primary shadow-lg transition-all hover:-translate-y-1 hover:border-accent hover:text-accent focus:outline-none focus:ring-2 focus:ring-accent"
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -171,7 +171,7 @@ export default function AiAssistant() {
               <button
                 onClick={() => setIsOpen(false)}
                 aria-label="Close assistant"
-                className="rounded-full p-2 text-text-secondary transition-colors hover:bg-white/5 hover:text-white"
+                className="rounded-full p-2 text-text-secondary transition-colors hover:bg-text-primary/5 hover:text-text-primary"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

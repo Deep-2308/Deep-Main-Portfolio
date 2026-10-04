@@ -116,7 +116,7 @@ export async function POST(req: Request) {
 
     // 5. Gemini Generation
     const result = await streamText({
-      model: customGoogle("gemini-3.8-flash"),
+      model: customGoogle("gemini-2.5-flash"),
       system: getSystemPrompt(isEngineerMode),
       messages: messages.map((msg: any) => ({
         role: msg.role,

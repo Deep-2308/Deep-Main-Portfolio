@@ -102,7 +102,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
   return (
     <main className="mx-auto max-w-4xl px-6 pb-24 pt-24 md:px-10 md:pb-36 md:pt-32">
       <Reveal delay={0}>
-        <Link href="/" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-text-secondary transition hover:text-white">
+        <Link href="/" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-text-secondary transition hover:text-text-primary">
           ← Back to projects
         </Link>
       </Reveal>
@@ -137,7 +137,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-medium text-background transition-all hover:-translate-y-0.5 hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                className="inline-flex items-center gap-2 rounded-full bg-text-primary px-6 py-3 text-sm font-medium text-background transition-all hover:-translate-y-0.5 hover:bg-accent hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-accent"
               >
                 View Live Project <ArrowUpRight className="h-4 w-4" />
               </a>
@@ -146,7 +146,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-white hover:bg-white hover:text-background focus:outline-none focus:ring-2 focus:ring-white"
+              className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-text-primary hover:bg-text-primary hover:text-background focus:outline-none focus:ring-2 focus:ring-text-primary"
             >
               <GitHubIcon className="h-4 w-4" /> View Source
             </a>
@@ -236,7 +236,7 @@ export default async function ProjectCaseStudy({ params }: { params: Promise<{ s
               href={project.repo}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-mono text-sm font-medium text-text-secondary hover:text-white"
+              className="inline-flex items-center gap-2 font-mono text-sm font-medium text-text-secondary hover:text-text-primary"
             >
               View GitHub ↗
             </a>
