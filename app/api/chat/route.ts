@@ -68,9 +68,9 @@ CRITICAL RULES:
 AUTHORITATIVE CONTEXT:
 ${portfolioContext}
 
-${isEngineerMode 
-  ? "ENGINEER MODE ACTIVE: Use highly technical terminology naturally. Highlight architectural decisions, backend structures, databases, and pipelines." 
-  : "NORMAL MODE ACTIVE: Keep answers concise, accessible, and friendly. Avoid overly deep technical dumps."}
+${isEngineerMode
+    ? "ENGINEER MODE ACTIVE: Use highly technical terminology naturally. Highlight architectural decisions, backend structures, databases, and pipelines."
+    : "NORMAL MODE ACTIVE: Keep answers concise, accessible, and friendly. Avoid overly deep technical dumps."}
 `;
 
 export async function POST(req: Request) {
@@ -128,7 +128,7 @@ export async function POST(req: Request) {
     return result.toUIMessageStreamResponse();
   } catch (error: any) {
     console.error("Chat API Error:", error);
-    
+
     // Explicit API Key Block handling
     if (error?.message?.includes("401") || error?.message?.includes("404") || error?.message?.includes("403")) {
       return new Response(JSON.stringify({ error: "Invalid API Key or Service Blocked" }), { status: 503 });
