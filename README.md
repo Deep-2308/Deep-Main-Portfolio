@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://deepkabariya.vercel.app/">Live Website</a>
+  <a href="https://deepkabariya.dev/">Live Website</a>
   ·
   <a href="https://github.com/Deep-2308">GitHub</a>
   ·
